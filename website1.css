@@ -1,0 +1,147 @@
+@import url(https://fonts.google.com/specimen/Zalando+Sans+SemiExpanded?categoryFilters=Feeling:%2FExpressive%2FBusiness);
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+
+}
+body
+{
+    background : #191970;
+
+}
+.header
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 8%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    background :#1b1b33;
+
+
+}
+.logo{
+    font-size: 25px;
+    color: #F0E68C;
+    text-decoration: none;
+    font-weigt: 600;
+    opacity: 0;
+    animation: slideRight 1s ease forwards; 
+}
+.navbar a{
+    display; inline-block;
+     font-size: 25px;
+    color: #F0E68C;
+    text-decoration: none;
+    font-weigt: 500;
+    margin: 0 20px;
+    transition: .3s;
+    opacity: 0;
+    animation: slideTop .5s ease forwards;
+    animation-delay : calc(.2s*var(--i))
+}
+.navbar a:hover,
+.navbar a.active{
+    color:greenyellow ;
+}
+.home{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 8% 0;
+    overflow:hidden;
+}
+.home-content{
+    max-width: 630px;
+}
+.home-content h1{
+    fontsize: 50px;
+    line-height: 1.2;
+    color:aliceblue ;
+    opacity: 0;
+    animation: slideBottom 1s ease forwards; 
+    animation-delay: 1s;
+}
+
+.home-content h3{
+    font-size: 40px;
+    
+    color:aliceblue;
+    opacity: 0;
+      animation: slideRight 1s ease forwards;
+     animation-delay: 1.3s;
+    
+
+}
+.home-content p {
+    font-size: 16px;
+    margin: 15px 0 30px;
+    color:bisque;
+    opacity: 0;
+     animation: slideBottom 1s ease forwards; 
+     animation-delay: 1s;
+
+}
+.btn:hover{
+    background: transparent;
+    color:#F0E68C;
+}
+.home-img{
+    position: relative;
+    right: -10%;
+    top: 10%;
+    width: 450px;
+    height: 450px;
+    transform: rotate(45deg);
+}
+.home-img .rhombus img {
+position: absolute;
+    width: 100%;
+    height: 100%;
+    background:#191970  ;
+    border: 25px solid #F0E68C;
+}
+.home-img .rhombus img :hover{
+    background: transparent;
+    color:#F0E68C;
+}
+@keyframes slideRight {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+     100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes slideTop {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+     100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes slideBottom {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+     100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
